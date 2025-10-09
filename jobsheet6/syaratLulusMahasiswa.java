@@ -86,6 +86,7 @@ public class syaratLulusMahasiswa {
 
         System.out.println("=== HASIL PENILAIAN ===");
         System.out.println("Nama Mahasiswa: " + nama);
+        System.out.println("NIM Mahasiswa : " + nim);
         System.out.printf("Algoritma & Pemrograman: %.2f (%s) - %s%n", akhir1, huruf1, status1);
         System.out.printf("Struktur Data           : %.2f (%s) - %s%n", akhir2, huruf2, status2);
         System.out.printf("Rata-rata Semester      : %.2f%n", rataRata);
