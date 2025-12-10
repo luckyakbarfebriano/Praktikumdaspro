@@ -15,7 +15,7 @@ public class Jobsheet13Beasiswa16 {
     }
 
     public static boolean validasiJenisBeasiswa(String jenis) {
-        return jenis.equalsIgnoreCase("Regular") || 
+        return jenis.equalsIgnoreCase("Reguler") || 
                jenis.equalsIgnoreCase("Unggulan") || 
                jenis.equalsIgnoreCase("Riset");
     }
@@ -23,7 +23,7 @@ public class Jobsheet13Beasiswa16 {
     public static boolean validasiPenghasilan(int penghasilan) {
         return penghasilan <= 2000000;
     }
-    
+
     public static void tambahData() {
         if (jumlahPendaftar >= 100) {
             System.out.println("Kapasitas pendaftar sudah penuh!");
@@ -41,14 +41,14 @@ public class Jobsheet13Beasiswa16 {
         
         String jenisBeasiswa = "";
         while (true) {
-            System.out.print("Jenis Beasiswa (Regular/Unggulan/Riset): ");
+            System.out.print("Jenis Beasiswa (Reguler/Unggulan/Riset): ");
             jenisBeasiswa = scanner.nextLine();
             if (validasiJenisBeasiswa(jenisBeasiswa)) {
                 jenisBeasiswa = jenisBeasiswa.substring(0, 1).toUpperCase() + 
                                jenisBeasiswa.substring(1).toLowerCase();
                 break;
             } else {
-                System.out.println("Jenis beasiswa harus Regular, Unggulan, atau Riset!");
+                System.out.println("Jenis beasiswa harus Reguler, Unggulan, atau Riset!");
             }
         }
         
@@ -85,11 +85,11 @@ public class Jobsheet13Beasiswa16 {
 
         for (int i = 0; i < jumlahPendaftar; i++) {
             System.out.printf("| %-20s | %-10s | %-8s | %-15s | Rp %-7s |\n",
-                    dataPendaftar[i][0],  // nama
-                    dataPendaftar[i][1],  // nim
-                    dataPendaftar[i][2],  // ipk
-                    dataPendaftar[i][3],  // jenis beasiswa
-                    dataPendaftar[i][4]); // penghasilan
+                    dataPendaftar[i][0], 
+                    dataPendaftar[i][1], 
+                    dataPendaftar[i][2], 
+                    dataPendaftar[i][3], 
+                    dataPendaftar[i][4]); 
         }
         
         System.out.println("=".repeat(70));
